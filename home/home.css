@@ -1,0 +1,76 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: myFirstFont;
+  src: url(Far_Tabssom.ttf);
+}
+a{
+  text-decoration: none;
+  color: inherit;
+}
+.top-bar-menu{
+  background-color: #222;
+  color:#999;
+  font-size: 13px;
+  font-family: myFirstFont;
+  min-height: 40px;
+  border-bottom: 1px solid #444;
+}
+.top-bar-menu .container{
+  padding: 10px;
+  white-space: nowrap;
+  letter-spacing: 1.5px;
+}
+.top-bar-menu .container ul{
+  direction: rtl;
+  display:flex;
+}
+.top-bar-menu .container li{
+  padding-left: 22px;
+  list-style-type: none;
+}
+.top-bar-menu .container li:hover{
+  color: aliceblue;
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .top-bar-menu .container{
+    overflow-x:scroll;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .top-bar-menu .container{
+    overflow-x:scroll;
+    margin-right: 30px;
+    margin-left: 30px;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .top-bar-menu .container{
+    overflow-x:hidden;
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}

@@ -14,13 +14,13 @@ a{
 .top-bar-menu{
   background-color: #222;
   color:#999;
-  font-size: 13px;
-  font-family: myFirstFont;
-  min-height: 40px;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 58px;
   border-bottom: 1px solid #444;
 }
 .top-bar-menu .container{
-  padding: 10px;
+  padding: 12px;
   white-space: nowrap;
   letter-spacing: 1.5px;
 }
@@ -35,14 +35,37 @@ a{
 .top-bar-menu .container li:hover{
   color: aliceblue;
 }
-
+/* header style*/
+header{
+  display: flex;
+  justify-content:space-between;
+  height:85px;
+  background-color:#222;
+  color: #fff;
+}
+header .logo a{
+  display:block;
+  background-color:#222;
+  background-image: url("logo.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+header .logo {
+ width: 160px;
+ padding-left: 25px;
+ padding-right: 25px;
+ border-left: 1px solid #444;
+}
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .top-bar-menu .container{
     overflow-x:scroll;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -50,8 +73,8 @@ a{
 @media only screen and (min-width: 600px) {
   .top-bar-menu .container{
     overflow-x:scroll;
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 15px;
+    margin-left: 15px;
   }
 }
 
@@ -62,7 +85,13 @@ a{
     margin-right: 0;
     margin-left: 0;
   }
-  
+  .top-bar-menu .container ul{
+    margin-right: 30px;
+  }
+  .top-bar-menu{
+    min-height: 40px;
+  }
+
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */

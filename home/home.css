@@ -45,6 +45,7 @@ header{
   'nav nav';
   background-color:#222;
   color: #fff;
+  position: relative;
 }
 header .main-nav{
   grid-area: nav; 
@@ -62,6 +63,19 @@ header .main-nav{
 }
 .main-nav ul li:hover{
   color:orange;
+}
+
+header .submenu{
+  position: absolute;
+  background-color:aqua;
+  width: 100vw;
+  height: 300px;
+  top:140px;
+  visibility: hidden;
+  transition: visibility 0.4s;
+}
+header .submenu:hover{
+  visibility: visible;
 }
 header .left{
   grid-area: search;

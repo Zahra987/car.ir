@@ -37,11 +37,46 @@ a{
 }
 /* header style*/
 header{
-  display: flex;
-  justify-content:space-between;
-  height:85px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 85px 50px;
+  grid-template-areas:
+  'logo search'
+  'nav nav';
   background-color:#222;
   color: #fff;
+}
+header .main-nav{
+  grid-area: nav; 
+  background-color: #fff;
+  color: black;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+.main-nav ul li{
+  list-style-type: none;
+  display:inline-block;
+  padding-right: 10px;
+  font-size: 0.85em;
+}
+.main-nav ul li:hover{
+  color:orange;
+}
+header .left{
+  grid-area: search;
+  display: flex;
+  justify-content:left;
+  align-items:center;
+}
+header .left>div{
+  display:inline-block;
+  font-size: 0.85em;
+  padding-left:11px;
+}
+header .left>div:hover{
+  cursor: pointer;
+  color: orange;
 }
 header .logo a{
   display:block;
@@ -58,6 +93,7 @@ header .logo {
  padding-left: 25px;
  padding-right: 25px;
  border-left: 1px solid #444;
+ grid-area: logo;
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -96,7 +132,21 @@ header .logo {
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-  
+  header{
+    grid-template-columns: 1fr 6fr 3fr;
+    grid-template-rows: 110px;
+    grid-template-areas:'logo nav search';
+    background-color:#222;
+    color: #fff;
+  }
+  header .main-nav{
+    grid-area: nav; 
+    background-color: #222;
+    color: #fff;
+  }
+  header .main-nav ul li{
+    font-size: 0.9em;
+  }
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

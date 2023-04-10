@@ -21,3 +21,10 @@ mainNavList[4].onmousemove=function () {
 mainNavList[4].onmouseout=function () {
   mainNavSubmenu.style.visibility='hidden';
 }
+////
+mainNavSubmenu.onmousemove=function () {
+  mainNavSubmenu.style.visibility='visible';
+}
+mainNavSubmenu.onmouseout=function () {
+  mainNavSubmenu.style.visibility='hidden';
+}

@@ -94,6 +94,35 @@ header .logo {
   border-left: 1px solid #444;
   grid-area: logo;
 }
+.submenu{
+  width: 100vw;
+  height: 70vh;
+  background-color:#373737;
+  top:135px;
+  visibility: hidden;
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 3fr 1fr 3fr;
+}
+.category-price{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #232323;
+  color: #fff;
+}
+.search-model{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  color: #fff;
+  background-color: #545454;
+}
+.suggested-model{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  background-color: #232323;
+}
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   .top-bar-menu .container{
@@ -108,6 +137,9 @@ header .logo {
     overflow-x:scroll;
     margin-right: 15px;
     margin-left: 15px;
+  }
+  .submenu{
+    grid-template-rows: 2fr 1fr 3fr;
   }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -140,6 +172,9 @@ header .logo {
   }
   header .main-nav ul li{
     font-size: 0.9em;
+  }
+  .submenu{
+    grid-template-rows: 1fr 1fr 3fr;
   }
 } 
 /* Extra large devices (large laptops and desktops, 1200px and up) */

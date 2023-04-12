@@ -1,6 +1,18 @@
 var mainNavList = document.querySelectorAll('header .main-nav ul li');
 var header = document.getElementById('header-container');
+
 var submenu=document.createElement('div');
+submenu.classList.add('submenu');
+var categoryPrice=document.createElement('div');
+categoryPrice.classList.add('category-price');
+var searchModel=document.createElement('div');
+searchModel.classList.add('search-model');
+var suggestedModel=document.createElement('div');
+suggestedModel.classList.add('suggested-model');
+
+submenu.appendChild(categoryPrice);
+submenu.appendChild(searchModel);
+submenu.appendChild(suggestedModel);
 
 mainNavList[0].onmousemove=function () {
   navItemHover();
@@ -22,11 +34,6 @@ mainNavList[4].onmouseout=function () {
 }
 function navItemHover() {
 header.after(submenu);
-submenu.innerHTML="asdfghjkl";
-submenu.style.width='100vw';
-submenu.style.height='70vh';
-submenu.style.backgroundColor='red';
-submenu.style.top='135px';
 submenu.style.visibility='visible';
 submenu.style.transition='visibility 0.4s';
 submenu.onmouseover=function () {
